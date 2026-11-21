@@ -15,7 +15,7 @@ This project focuses on autonomous navigation and hardware control using an **ST
 ---
 
 ## My Core Contributions
-*   **Hardware & Circuit Design:** Independently designed the custom PCB layout (top and bottom layers) and power conversion circuit to ensure stable operation for the MCU and IR sensors.
+*   **Hardware & Circuit Design:** Independently designed the custom PCB layout and schematics. Implemented a fool-proof asymmetric pin design for the LCD interface to prevent reverse insertion during assembly.
 *   **Autonomous Line Tracking:** Developed control logic using infrared sensor arrays to detect black/white contrast, enabling dynamic speed adjustment and successful right-angle turns.
 *   **State-Machine Navigation (Elisa-3):** Co-developed corridor navigation using sensor inputs, route counters, and state flags to track the robot's status.
 
@@ -29,15 +29,20 @@ This project focuses on autonomous navigation and hardware control using an **ST
 *   **Sensor Measurement Inaccuracies:** For the Elisa-3 robot, the proximity sensor fitting was distorted over certain ranges. We optimized the system by using raw sensor readings at target distances, achieving steady wall-following behavior.
 
 ---
-
-## Hardware Gallery
+## 🖼️ Hardware Gallery
 *(Custom STC8A8K64D4 Main Control Board Design)*
 
+**1. PCB Routing & Layout**
 | Top Layer Routing | Bottom Layer Routing |
 | :---: | :---: |
 | ![PCB Top](pcb-top-layer.jpg) | ![PCB Bottom](pcb-bottom-layer.jpg) |
 
----
+**2. Schematic Design (Interface & Communication)**
+*(Note: The LCD interface uses an asymmetric pin design to prevent reverse insertion.)*
+
+| LCD Interface Schematic | SPI & I2C Bus Assignment |
+| :---: | :---: |
+| ![LCD Schematic](schematic-lcd-interface.jpg) | ![Bus Schematic](schematic-spi-i2c.jpg) |
 
 ## Results & Achievements
 *   Successfully met the challenge of navigating through sharp right-angle turns with the custom-built car.
