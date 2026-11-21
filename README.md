@@ -1,40 +1,47 @@
-# Elisa-3 Autonomous Navigation & Control
+# Micro-Robot Navigation & Embedded Control
 
 ## Project Overview
-An embedded systems course project focused on autonomous navigation using the **Elisa-3** micro-robot. The project involved implementing boundary detection, dynamic obstacle avoidance, PID wall-distance control, and state-machine-based corridor navigation.
+This project focuses on autonomous navigation and hardware control using an **STC8A8K64D4**-based custom line-tracking car and the **Elisa-3** micro-robot platform. The goal was to implement boundary detection, PID wall-distance control, and robust line-tracking through sharp right-angle turns.
+
+<!-- 插入成品车照片 -->
+![Robot Assembly](robot-overall-assembly.jpg)
 
 ### Tech Stack
 *   **Languages:** C / C++
-*   **Platform:** Elisa-3 Micro-robot
-*   **Sensors:** Ground sensors, Proximity sensors
-*   **Control:** PWM motor control, PID algorithms, State machines
+*   **Platforms:** STC8A8K64D4 (8051 MCU), Elisa-3
+*   **Hardware Design:** Custom PCB Design, Power Circuit (TPS5430DA)
+*   **Sensors & Actuators:** Infrared (IR) sensors, Proximity sensors, PWM motor control
 
 ---
 
 ## My Core Contributions
-*   **Autonomous Navigation:** Independently programmed boundary detection and dynamic obstacle avoidance using ground/proximity sensors, PWM motor control, and randomized turning algorithms.
-*   **PID Wall-Distance Control:** Analyzed sensor measurement errors and tuned control parameters to maintain a stable following distance from the wall.
-*   **State-Machine Navigation:** Co-developed line-following and corridor navigation logic using sensor inputs, route counters, and state flags to track the robot's status.
+*   **Hardware & Circuit Design:** Independently designed the custom PCB layout (top and bottom layers) and power conversion circuit to ensure stable operation for the MCU and IR sensors.
+*   **Autonomous Line Tracking:** Developed control logic using infrared sensor arrays to detect black/white contrast, enabling dynamic speed adjustment and successful right-angle turns.
+*   **State-Machine Navigation (Elisa-3):** Co-developed corridor navigation using sensor inputs, route counters, and state flags to track the robot's status.
 
 ---
 
-## Engineering Troubleshooting
-*Real engineering is about solving unexpected problems.*
+## Engineering Troubleshooting & Error Analysis
+*Real engineering is about solving unexpected problems across hardware and software.*
 
-*   **Sensor Measurement Inaccuracies:** Attempted to fit proximity sensor readings to actual distances, but the fit was distorted over certain ranges. Due to limited lab time, we optimized the system by using raw sensor readings at target distances, which achieved a reasonably steady wall-following behavior.
-*   **Finish-Point Reliability:** The robot could enter the corridor but did not stop at the designated endpoint reliably. We analyzed the limitations of the stopping condition in our final report, documenting it as a basis for future sensor-fusion improvements.
+*   **Environmental Light Interference:** IR sensors occasionally misjudged the track under strong ambient light. I implemented a "majority vote" logic in the code to filter out noisy signals, significantly improving stability.
+*   **Mechanical & Control Errors:** To address mechanical gaps and inconsistent motor speeds during right-angle turns, I tuned the PWM duty cycle differential between the left and right wheels to ensure fast and accurate trajectory correction.
+*   **Sensor Measurement Inaccuracies:** For the Elisa-3 robot, the proximity sensor fitting was distorted over certain ranges. We optimized the system by using raw sensor readings at target distances, achieving steady wall-following behavior.
+
+---
+
+## Hardware Gallery
+*(Custom STC8A8K64D4 Main Control Board Design)*
+
+| Top Layer Routing | Bottom Layer Routing |
+| :---: | :---: |
+| ![PCB Top](pcb-top-layer.jpg) | ![PCB Bottom](pcb-bottom-layer.jpg) |
 
 ---
 
 ## Results & Achievements
-*   Successfully met the first challenge's requirements (boundary detection and obstacle avoidance) in laboratory testing.
-*   Documented the system's control logic and physical constraints, providing a solid foundation for future real-time embedded control projects.
-
----
-
-## Acknowledgements
-*   **Course Instructors:** [Dr.Bao kha Nguyen] at [University of Sussex], for providing the hardware platform and lab testing environment.
-*   **Project Teammates:** [Miss Wu Mr Yang], for their collaboration in testing and debugging.
+*   Successfully met the challenge of navigating through sharp right-angle turns with the custom-built car.
+*   Designed and validated the complete hardware schematic, PCB layout, and embedded control logic.
 
 ---
 *Maintained by FishInCode.*
