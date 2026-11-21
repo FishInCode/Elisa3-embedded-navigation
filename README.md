@@ -33,8 +33,8 @@ An embedded systems course project focused on autonomous navigation using the **
 ---
 
 ## Acknowledgements
-*   **Course Instructors:** [填写老师名字] at [ZJSU], for providing the hardware platform and lab testing environment.
-*   **Project Teammates:** [填写队友名字], for their collaboration in testing and debugging.
+*   **Course Instructors:** [Dr.Bao kha Nguyen] at [University of Sussex], for providing the hardware platform and lab testing environment.
+*   **Project Teammates:** [Miss Wu Mr Yang], for their collaboration in testing and debugging.
 
 ---
 *Maintained by FishInCode.*
