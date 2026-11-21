@@ -1,4 +1,4 @@
-# 🤖 Micro-Robot Navigation & Embedded Control
+# 🤖 Traction Control 
 
 ## 📌 Project Overview
 This project focuses on autonomous navigation and hardware control using an **STC8A8K64D4**-based custom line-tracking car and the **Elisa-3** micro-robot platform. The goal was to implement boundary detection, PID wall-distance control, and robust line-tracking through sharp right-angle turns.
