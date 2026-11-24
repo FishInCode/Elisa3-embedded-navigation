@@ -19,6 +19,10 @@ This project focuses on autonomous navigation and hardware control using an **ST
 *   **Autonomous Line Tracking:** Developed self-learning PID control logic using infrared sensor arrays to detect black/white contrast, enabling dynamic speed adjustment and successful clockwise and counter clockwise turns.
 *   **9-channel Infrared Detection Broad:** Co-developed and imporve 9-channel *black & white* detection board using infrared sensor input, participating in the circuit soldering process.
 
+| Clockwise | Counterclockwise|
+| :---: | :---: |
+| ![present](clockwise.gif) | ![present](counterclockwise.gif) |
+
 ---
 
 ## 🐛 Engineering Troubleshooting & Error Analysis
