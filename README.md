@@ -21,7 +21,7 @@ This project focuses on autonomous navigation and hardware control using an **ST
 
 | Clockwise | Counterclockwise|
 | :---: | :---: |
-| ![present](clockwise.gif) | ![present](counterclockwise.gif) |
+| ![present](https://github.com/FishInCode/traction-control-car/blob/main/clockwise.gif) | ![present](https://github.com/FishInCode/traction-control-car/blob/main/counterclockwise.gif) |
 
 ---
 
