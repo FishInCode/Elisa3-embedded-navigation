@@ -50,7 +50,7 @@ This project focuses on autonomous navigation and hardware control using an **ST
 
 ---
 
-## 🙏 Acknowledgements
+## 👍 Acknowledgements
 *   **Course Instructors:** *Mr. Zhu* at *Zhejing Gongshang University*, for providing the hardware platform and lab testing environment.
 *   **Project Teammates:** *Miss Yu & Mr Shi*, for their collaboration in testing and hardware debugging.
 
